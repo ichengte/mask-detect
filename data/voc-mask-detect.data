@@ -1,0 +1,7 @@
+classes= 2
+train  = 2007_train.txt
+valid  = 2007_test.txt
+#difficult = data/difficult_2007_test.txt
+names = data/voc-mask-detect.names
+backup = backup/
+

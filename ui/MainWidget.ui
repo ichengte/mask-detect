@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>口罩佩戴识别实时检测系统</string>
+  </property>
+  <property name="windowOpacity">
+   <double>0.000000000000000</double>
+  </property>
+  <widget class="QLabel" name="detectDisplayLab">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>20</y>
+     <width>416</width>
+     <height>416</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="openCameraBtn">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>450</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>打开摄像头</string>
+   </property>
+   <property name="autoRepeatDelay">
+    <number>300</number>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="openImageBtn">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>450</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>打开图片</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="openVideoBtn">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>450</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>打开视频</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>openCameraBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>open_camera_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>79</x>
+     <y>459</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>212</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>openVideoBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>open_video_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>429</x>
+     <y>459</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>249</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>openImageBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>open_image_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>259</x>
+     <y>459</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>249</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>open_camera_click()</slot>
+  <slot>open_video_click()</slot>
+  <slot>open_image_click()</slot>
+ </slots>
+</ui>

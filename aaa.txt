@@ -1,0 +1,17 @@
+darknet detector train data/voc-mask-detect.data cfg/yolov3-voc-mask-detect.cfg darknet53.conv.74 1 > visualization/mask-detect-train.log
+
+
+
+
+
+算力：https://blog.csdn.net/xue_csdn/article/details/99620127
+yolov3命令：https://blog.csdn.net/qionggaobi9328/article/details/105086436/
+
+
+darknet detector valid data/voc-mask-detect.data cfg/yolov3-voc-mask-detect.cfg backup/yolov3-voc-mask-detect_final-extend.weights -out "" -gpus 0
+
+
+darknet detector map data/voc-mask-detect.data cfg/yolov3-voc-mask-detect.cfg backup/yolov3-voc-mask-detect_final-extend.weights -points 11
+
+
+python reval_voc_py3.py --voc_dir VOCdevkit --year 2007 --image_set train.txt data/voc-mask-detect.names results
